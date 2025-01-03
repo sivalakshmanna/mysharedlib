@@ -9,21 +9,21 @@ def call() {
             stage('Build') {
                 steps {
                     script {
-                        BuildStage.execute(this)
+                        BuildStage.execute()
                     }
                 }
             }
             stage('Test') {
                 steps {
                     script {
-                        TestStage.execute(this)
+                        TestStage.execute()
                     }
                 }
             }
             stage('Deploy') {
                 steps {
                     script {
-                        DeployStage.execute(this)
+                        DeployStage.execute()
                     }
                 }
             }
